@@ -1,0 +1,119 @@
+
+#clock { 
+    font-size: 175px; 
+    width: 900px; 
+    margin: 200px; 
+    text-align: center; 
+  }
+
+  /* .chart-scale {
+    transform: rotate(90deg)
+  } */
+  
+  .btn-scale {
+    min-width: 44px;
+    width: 6%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .btn-scale-asc-1, .btn-scale-desc-10 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-1:hover,
+  .btn-scale-desc-10:hover {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-2,
+  .btn-scale-desc-9{
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-2:hover,
+  .btn-scale-desc-9:hover{
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-3,
+  .btn-scale-desc-8 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-3:hover,
+  .btn-scale-desc-8:hover {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-4,
+  .btn-scale-desc-7 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-4:hover,
+  .btn-scale-desc-7:hover {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-5,
+  .btn-scale-desc-6 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-5:hover,
+  .btn-scale-desc-6:hover {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-6,
+  .btn-scale-desc-5 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-6:hover,
+  .btn-scale-desc-5:hover {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-7,
+  .btn-scale-desc-4 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-7:hover,
+  .btn-scale-desc-4:hover {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-8,
+  .btn-scale-desc-3 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-8:hover,
+  .btn-scale-desc-3:hover {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-9,
+  .btn-scale-desc-2 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-9:hover,
+  .btn-scale-desc-2:hover {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-10,
+  .btn-scale-desc-1 {
+    background-color: #33FF00;
+  }
+  
+  .btn-scale-asc-10:hover,
+  .btn-scale-desc-1:hover {
+    background-color: #33FF00;
+  }
