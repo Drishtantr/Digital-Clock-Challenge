@@ -1,56 +1,70 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-  
-<head> 
-    <meta charset="UTF-8" /> 
-    <meta name="viewport" content= 
-        "width=device-width,  
-        initial-scale=1.0" /> 
-  
-    <title>Clock</title> 
-    <link rel="stylesheet" href="style.css"> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,  
+        initial-scale=1.0"
+    />
 
-</head> 
-  
-<body> 
-    <div id="clock"></div> 
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- <div id="hl"></div>
+    <div id="hr"></div>
+    <div id="ml"></div>
+    <div id="mr"></div>
+    <div id="sl"></div>
+    <div id="sr"></div> -->
+    <div id="clock"></div>
+    <div id="ttime"></div>
 
     <div class="container">
-        <div class="row">
-            <div class="chart-scale">
-              <button class="btn btn-scale btn-scale-asc-1">1</button>
-              <button class="btn btn-scale btn-scale-asc-2">2</button>
-              <button class="btn btn-scale btn-scale-asc-3">3</button>
-              <button class="btn btn-scale btn-scale-asc-4">4</button>
-              <button class="btn btn-scale btn-scale-asc-5">5</button>
-              <button class="btn btn-scale btn-scale-asc-6">6</button>
-              <button class="btn btn-scale btn-scale-asc-7">7</button>
-              <button class="btn btn-scale btn-scale-asc-8">8</button>
-              <button class="btn btn-scale btn-scale-asc-9">9</button>
-              <button class="btn btn-scale btn-scale-asc-10">10</button>      
-            </div>
+      <div class="chart-scale">
+        <button class="btn btn-scale btn-scale-asc-1">1</button>
+        <button class="btn btn-scale btn-scale-asc-2">2</button>
+        <button class="btn btn-scale btn-scale-asc-3">3</button>
+        <button class="btn btn-scale btn-scale-asc-4">4</button>
+        <button class="btn btn-scale btn-scale-asc-5">5</button>
+        <button class="btn btn-scale btn-scale-asc-6">6</button>
+        <button class="btn btn-scale btn-scale-asc-7">7</button>
+        <button class="btn btn-scale btn-scale-asc-8">8</button>
+        <button class="btn btn-scale btn-scale-asc-9">9</button>
+        <button class="btn btn-scale btn-scale-asc-10">10</button>
+      </div>
     </div>
-  
-    <script> 
-        setInterval(showTime, 1000); 
-        function showTime() { 
-            let time = new Date(); 
-            let hour = time.getHours(); 
-            let min = time.getMinutes(); 
-            let sec = time.getSeconds(); 
-  
-            hour = hour < 10 ? "0" + hour : hour; 
-            min = min < 10 ? "0" + min : min; 
-            sec = sec < 10 ? "0" + sec : sec; 
-  
-            let currentTime = hour + ":"  
-                + min + ":" + sec; 
-  
-            document.getElementById("clock").innerHTML = currentTime; 
-        } 
-  
-        showTime(); 
-    </script> 
-</body> 
-  
-</html> 
+
+    <script>
+      setInterval(showTime, 1000);
+      function showTime() {
+        let time = new Date();
+        let hour = time.getHours();
+        let min = time.getMinutes();
+        let sec = time.getSeconds();
+        
+        let hl = hour < 10? 0: Math.trunc(hour/10);
+        let hr = hour < 10? hour : hour%10 ;
+        let ml = min < 10? 0: Math.trunc(min/10);
+        let mr = min < 10? min : min%10 ;
+        let sl = sec < 10? 0: Math.trunc(sec/10);
+        let sr = sec < 10? sec : sec%10 ;
+
+        hour = hour < 10 ? "0" + hour : hour;
+        min = min < 10 ? "0" + min : min;
+        sec = sec < 10 ? "0" + sec : sec;
+
+        let ttime = hour + ":" + min + ":" + sec;
+
+        let currentTime = `${hl}${hr} : ${ml}${mr} : ${sl}${sr}`;
+
+        document.getElementById("clock").innerHTML = currentTime;
+        document.getElementById("ttime").innerHTML = ttime;
+      }
+
+      showTime();
+    </script>
+  </body>
+</html>
