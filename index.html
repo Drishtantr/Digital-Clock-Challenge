@@ -13,58 +13,88 @@
   </head>
 
   <body>
-    <!-- <div id="hl"></div>
-    <div id="hr"></div>
-    <div id="ml"></div>
-    <div id="mr"></div>
-    <div id="sl"></div>
-    <div id="sr"></div> -->
-    <div id="clock"></div>
-    <div id="ttime"></div>
+    <div id="container">
+      <div id="stage">
+        <div id="hours1" class="wheel">
+          <div class="plane one">0</div>
+          <div class="plane two">1</div>
+          <div class="plane three">2</div>
+          <div class="plane four"></div>
+          <div class="plane five"></div>
+          <div class="plane six"></div>
+          <div class="plane seven"></div>
+          <div class="plane eight"></div>
+          <div class="plane nine"></div>
+          <div class="plane ten"></div>
+        </div>
 
-    <div class="container">
-      <div class="chart-scale">
-        <button class="btn btn-scale btn-scale-asc-1">1</button>
-        <button class="btn btn-scale btn-scale-asc-2">2</button>
-        <button class="btn btn-scale btn-scale-asc-3">3</button>
-        <button class="btn btn-scale btn-scale-asc-4">4</button>
-        <button class="btn btn-scale btn-scale-asc-5">5</button>
-        <button class="btn btn-scale btn-scale-asc-6">6</button>
-        <button class="btn btn-scale btn-scale-asc-7">7</button>
-        <button class="btn btn-scale btn-scale-asc-8">8</button>
-        <button class="btn btn-scale btn-scale-asc-9">9</button>
-        <button class="btn btn-scale btn-scale-asc-10">10</button>
+        <div id="hours2" class="wheel">
+          <div class="plane one">0</div>
+          <div class="plane two">1</div>
+          <div class="plane three">2</div>
+          <div class="plane four">3</div>
+          <div class="plane five">4</div>
+          <div class="plane six">5</div>
+          <div class="plane seven">6</div>
+          <div class="plane eight">7</div>
+          <div class="plane nine">8</div>
+          <div class="plane ten">9</div>
+        </div>
+
+        <div id="minutes1" class="wheel">
+          <div class="plane one">0</div>
+          <div class="plane two">1</div>
+          <div class="plane three">2</div>
+          <div class="plane four">3</div>
+          <div class="plane five">4</div>
+          <div class="plane six">5</div>
+          <div class="plane seven"></div>
+          <div class="plane eight"></div>
+          <div class="plane nine"></div>
+          <div class="plane ten"></div>
+        </div>
+
+        <div id="minutes2" class="wheel">
+          <div class="plane one">0</div>
+          <div class="plane two">1</div>
+          <div class="plane three">2</div>
+          <div class="plane four">3</div>
+          <div class="plane five">4</div>
+          <div class="plane six">5</div>
+          <div class="plane seven">6</div>
+          <div class="plane eight">7</div>
+          <div class="plane nine">8</div>
+          <div class="plane ten">9</div>
+        </div>
+
+        <div id="seconds1" class="wheel">
+          <div class="plane one">0</div>
+          <div class="plane two">1</div>
+          <div class="plane three">2</div>
+          <div class="plane four">3</div>
+          <div class="plane five">4</div>
+          <div class="plane six">5</div>
+          <div class="plane seven"></div>
+          <div class="plane eight"></div>
+          <div class="plane nine"></div>
+          <div class="plane ten"></div>
+        </div>
+
+        <div id="seconds2" class="wheel">
+          <div class="plane one">0</div>
+          <div class="plane two">1</div>
+          <div class="plane three">2</div>
+          <div class="plane four">3</div>
+          <div class="plane five">4</div>
+          <div class="plane six">5</div>
+          <div class="plane seven">6</div>
+          <div class="plane eight">7</div>
+          <div class="plane nine">8</div>
+          <div class="plane ten">9</div>
+        </div>
       </div>
     </div>
 
-    <script>
-      setInterval(showTime, 1000);
-      function showTime() {
-        let time = new Date();
-        let hour = time.getHours();
-        let min = time.getMinutes();
-        let sec = time.getSeconds();
-        
-        let hl = hour < 10? 0: Math.trunc(hour/10);
-        let hr = hour < 10? hour : hour%10 ;
-        let ml = min < 10? 0: Math.trunc(min/10);
-        let mr = min < 10? min : min%10 ;
-        let sl = sec < 10? 0: Math.trunc(sec/10);
-        let sr = sec < 10? sec : sec%10 ;
-
-        hour = hour < 10 ? "0" + hour : hour;
-        min = min < 10 ? "0" + min : min;
-        sec = sec < 10 ? "0" + sec : sec;
-
-        let ttime = hour + ":" + min + ":" + sec;
-
-        let currentTime = `${hl}${hr} : ${ml}${mr} : ${sl}${sr}`;
-
-        document.getElementById("clock").innerHTML = currentTime;
-        document.getElementById("ttime").innerHTML = ttime;
-      }
-
-      showTime();
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>

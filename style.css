@@ -1,119 +1,121 @@
+body {
+  color: #fff;
+  font-family: "HelveticaNeue", Helvetica, sans-serif;
+  background: rgb(7, 74, 93);
+}
 
-#clock { 
-    font-size: 175px; 
-    width: 900px; 
-    margin: 200px; 
-    text-align: center; 
-  }
+#container {
+  width: 1030px;
+  margin: 0 auto;
+  height: 100%;
+  perspective: 2500;
+  perspective-origin: center center;
+}
 
-  /* .chart-scale {
-    transform: rotate(90deg)
-  } */
-  
-  .btn-scale {
-    min-width: 44px;
-    width: 6%;
-    text-align: center;
-    font-weight: bold;
-    color: black;
-    font-family: 'Lato', sans-serif;
-  }
-  
-  .btn-scale-asc-1, .btn-scale-desc-10 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-1:hover,
-  .btn-scale-desc-10:hover {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-2,
-  .btn-scale-desc-9{
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-2:hover,
-  .btn-scale-desc-9:hover{
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-3,
-  .btn-scale-desc-8 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-3:hover,
-  .btn-scale-desc-8:hover {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-4,
-  .btn-scale-desc-7 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-4:hover,
-  .btn-scale-desc-7:hover {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-5,
-  .btn-scale-desc-6 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-5:hover,
-  .btn-scale-desc-6:hover {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-6,
-  .btn-scale-desc-5 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-6:hover,
-  .btn-scale-desc-5:hover {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-7,
-  .btn-scale-desc-4 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-7:hover,
-  .btn-scale-desc-4:hover {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-8,
-  .btn-scale-desc-3 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-8:hover,
-  .btn-scale-desc-3:hover {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-9,
-  .btn-scale-desc-2 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-9:hover,
-  .btn-scale-desc-2:hover {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-10,
-  .btn-scale-desc-1 {
-    background-color: #33FF00;
-  }
-  
-  .btn-scale-asc-10:hover,
-  .btn-scale-desc-1:hover {
-    background-color: #33FF00;
-  }
+#stage {
+  width: 100%;
+  height: 100%;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  transform: translateZ(-300px);
+
+}
+
+.wheel {
+  height: 150px;
+  width: 150px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.plane {
+  font-family: "HelveticaNeue-CondensedBold", Helvetica, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 140px;
+  line-height: 1;
+  background: rgba(43, 56, 3, 0.95);
+  border: 1px solid rgba(43, 56, 3, 0.95);
+  transition: transform 2s, opacity 2s;
+  backface-visibility: hidden;
+}
+
+#hours1 {
+  position: absolute;
+  top: 250px;
+  left: 0;
+}
+
+#hours2 {
+  position: absolute;
+  top: 250px;
+  left: 160px;
+}
+
+#minutes1 {
+  position: absolute;
+  top: 250px;
+  left: 360px;	
+}
+
+#minutes2 {
+  position: absolute;
+  top: 250px;
+  left: 520px;
+}
+
+#seconds1 {
+  position: absolute;
+  top: 250px;
+  left: 720px;
+}
+
+#seconds2 {
+  position: absolute;
+  top: 250px;
+  left: 880px;
+}
+
+.one {
+  transform: translateZ(240px);
+}
+
+.two {
+  transform: rotateX(36deg) translateZ(240px);
+}
+
+.three {
+  transform: rotateX(72deg) translateZ(240px);
+}
+
+.four {
+  transform: rotateX(108deg) translateZ(240px);
+}
+
+.five {
+  transform: rotateX(144deg) translateZ(240px);
+}
+
+.six {
+  transform: rotateX(180deg) translateZ(240px);
+}
+
+.seven {
+  transform: rotateX(216deg) translateZ(240px);
+}
+
+.eight {
+  transform: rotateX(252deg) translateZ(240px);
+}
+
+.nine {
+  transform: rotateX(288deg) translateZ(240px);
+}
+
+.ten {
+  transform: rotateX(324deg) translateZ(240px);
+}
